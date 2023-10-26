@@ -15,9 +15,9 @@ function draw(){
     drawPlayer()
     ctx.font = '24px Consolas'
     ctx.fillText('Score: '+score,50,50)
-    timeUntilSpawn -= 5
+    timeUntilSpawn -=10
     if(timeUntilSpawn == 0){
-        timeUntilSpawn = 2000-score;
+        timeUntilSpawn = 1000-score;
         spawnBall()
     }
     for(let i = 0; i< ballsX.length; i++)
