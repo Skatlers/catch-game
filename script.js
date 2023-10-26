@@ -8,16 +8,16 @@ let moveRight = false
 let moveLeft = false
 let ballsX = []
 let ballsY = []
-let timeUntilSpawn = 100
+let timeUntilSpawn = 1000
 let score = 0
 function draw(){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawPlayer()
     ctx.font = '24px Consolas'
     ctx.fillText('Score: '+score,50,50)
-    timeUntilSpawn -= 20
+    timeUntilSpawn -= 10
     if(timeUntilSpawn == 0){
-        timeUntilSpawn = 1000;
+        timeUntilSpawn = 1000-score;
         spawnBall()
     }
     for(let i = 0; i< ballsX.length; i++)
